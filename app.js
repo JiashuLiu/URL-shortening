@@ -8,10 +8,12 @@ var base58 = require('./base58.js');
 
 // grab the url model
 var Url = require('./models/url');
-
 // create a connection to our MongoDB
-mongoose.connect('mongodb://' + config.db.host + '/' + config.db.name);
-
+var dbURI='mongodb://' + config.db.host + '/' + config.db.name;
+if (process.env.NODE_ENV === 'production') {
+    dbURI= process.env.MONGOLAB_URI;
+}
+mongoose.connect(dbURI);
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json()); // support json encoded bodies
