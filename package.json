@@ -1,0 +1,24 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "A URL shortening microservice created with NodeJS and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiashuLiu/URL-shortening.git"
+  },
+  "author": "JiashuLiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JiashuLiu/URL-shortening/issues"
+  },
+  "homepage": "https://github.com/JiashuLiu/URL-shortening#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.20"
+  }
+}
